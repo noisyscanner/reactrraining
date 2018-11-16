@@ -1,32 +1,72 @@
-.App {
-  text-align: center;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 2rem;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.todoContainer {
+    background-color: #fafafa;
+    border-radius: 5px;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todoContainer ul {
+    list-style: none;
+    flex: 1;
+    margin: 1rem 0 0;
+    padding: 0;
+    overflow-y: scroll;
 }
 
-.App-link {
-  color: #61dafb;
+.todoContainer ul.shadow {
+    box-shadow: inset 0 -10px 10px -10px black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todoContainer li {
+    font-size: 24pt;
+    border-radius: 5px;
+    display: flex;
+}
+
+.todoContainer li:hover {
+    background-color: #eee;
+}
+
+.todoContainer li input[type=checkbox] {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.todoContainer li label {
+    cursor: pointer;
+    flex: 1;
+}
+
+.addTodoContainer {
+    align-self: flex-end;
+}
+
+.addTodoContainer > * {
+    border: 0 none;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 1rem;
+    font-size: 22pt;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.addTodoContainer input {
+    font-weight: bold;
+}
+
+.addTodoContainer button {
+    margin-left: 1rem;
+    cursor: pointer;
 }
